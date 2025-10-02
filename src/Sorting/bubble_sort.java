@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class bubble_sort {
 
     public static void scanArray(int array[], int size, Scanner scan) {
-        for (int i = 0; i < size; i++) {
-            System.out.print("Enter array element " + (i + 1) + " : ");
-            array[i] = scan.nextInt();
+        try (scan) {
+            for (int i = 0; i < size; i++) {
+                System.out.print("Enter array element " + (i + 1) + " : ");
+                array[i] = scan.nextInt();
+            }
         }
-        scan.close();
     }
 
     public static void printArray(int array[], int size) {
@@ -34,15 +35,15 @@ public class bubble_sort {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter size of array: ");
-        int size = scan.nextInt();
-        int[] array = new int[size];
-
-        scanArray(array, size,scan);
-        bubbleSort(array, size);
-        System.out.println("\nArray elements are:");
-        printArray(array, size);
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter size of array: ");
+            int size = scan.nextInt();
+            int[] array = new int[size];
+            
+            scanArray(array, size,scan);
+            bubbleSort(array, size);
+            System.out.println("\nArray elements are:");
+            printArray(array, size);
+        }
     }
 }

@@ -13,13 +13,12 @@ public class Factorial {
             total = total * i;
         }
         System.out.println("Factorial : " + total);
-        return;
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter number = ");
-        int n = scan.nextInt();
-        getFact(n);
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter number = ");
+            int n = scan.nextInt();
+            getFact(n);
+        }
     }
 }

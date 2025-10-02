@@ -18,22 +18,22 @@ public class Neg_Pos_Zero {
         System.out.println("Zeroes entered : " + zeroes);
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int pos = 0;
-        int neg = 0;
-        int zeroes = 0;
-
-        while (continueEntering(scan)){
-            int n = readNumber(scan);
-            if (n > 0){
-                pos++;
-            } else if (n < 0){
-                neg++;
-            } else{
-                zeroes++;
+        try (Scanner scan = new Scanner(System.in)) {
+            int pos = 0;
+            int neg = 0;
+            int zeroes = 0;
+            
+            while (continueEntering(scan)){
+                int n = readNumber(scan);
+                if (n > 0){
+                    pos++;
+                } else if (n < 0){
+                    neg++;
+                } else{
+                    zeroes++;
+                }
             }
+            printCounts(pos, neg, zeroes);
         }
-        printCounts(pos, neg, zeroes);
-        scan.close();
     }
 }

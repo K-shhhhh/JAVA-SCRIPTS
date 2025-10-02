@@ -8,12 +8,12 @@ public class X_Raise_To_N {
         return total;
     }
      public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter base number : ");
-        Double x = scan.nextDouble();
-        System.out.print("Enter power number : ");
-        Double n = scan.nextDouble();
-        System.out.println("X raise to N = " + getAns(x, n));
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter base number : ");
+            Double x = scan.nextDouble();
+            System.out.print("Enter power number : ");
+            Double n = scan.nextDouble();
+            System.out.println("X raise to N = " + getAns(x, n));
+        }
      }
 }

@@ -8,12 +8,12 @@ public class SumOf2 {
         return sum;
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter number : ");
-        int a = scan.nextInt();
-        System.out.print("Enter number : ");
-        int b = scan.nextInt();
-        System.out.println("Sum = " + calculateSum(a, b));
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter number : ");
+            int a = scan.nextInt();
+            System.out.print("Enter number : ");
+            int b = scan.nextInt();
+            System.out.println("Sum = " + calculateSum(a, b));
+        }
     }
 }

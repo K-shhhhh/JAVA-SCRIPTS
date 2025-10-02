@@ -13,10 +13,10 @@ public class SumOfOddN {
         return total;
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter n : ");
-        int n = scan.nextInt();
-        System.out.println("Sum of all odd numbers till n = " + getSum(n));
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter n : ");
+            int n = scan.nextInt();
+            System.out.println("Sum of all odd numbers till n = " + getSum(n));
+        }
     }
 }

@@ -33,14 +33,14 @@ public class insertion_sort {
         }
     }
     public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter size of array : ");
-        int size = scan.nextInt();
-        int array[] = new int[size];
-        scanArray(array, size, scan);
-        insertSort(array, size);
-        printArray(array, size);
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter size of array : ");
+            int size = scan.nextInt();
+            int array[] = new int[size];
+            scanArray(array, size, scan);
+            insertSort(array, size);
+            printArray(array, size);
+        }
     }
 
 }
