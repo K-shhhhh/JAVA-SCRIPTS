@@ -1,7 +1,7 @@
 
 
 interface Animal{
-    int eyes = 2; // value fized for all
+    int EYES = 2; // value fixed for all
     void walk(); // no need to write public
     // Animal(){} ---> Cannot make constructor
     /*
