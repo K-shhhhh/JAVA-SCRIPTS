@@ -17,6 +17,7 @@ interface Animal{
 // }
 
 class Horse implements Animal{ // multiple inheritance 
+    @SuppressWarnings("override")
     public void walk(){
         System.out.println("Walks on 4 legs abc");
     }
@@ -26,6 +27,7 @@ class Horse implements Animal{ // multiple inheritance
 }
 
 class Chicken implements Animal{
+    @SuppressWarnings("override")
     public void walk(){
         System.out.println("Walks on 2 legs");
     }

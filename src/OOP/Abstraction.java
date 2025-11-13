@@ -15,6 +15,7 @@ class Horse extends Animal{
     Horse(){
         System.out.println("Horse created");
     }
+    @SuppressWarnings("override")
     public void walk(){
         System.out.println("Walks on 4 legs");
     }
@@ -24,6 +25,7 @@ class Chicken extends Animal {
     Chicken(){
         System.out.println("Chicken created");
     }
+    @SuppressWarnings("override")
     public void walk(){
         System.out.println("Walks on 2 legs");
     }
